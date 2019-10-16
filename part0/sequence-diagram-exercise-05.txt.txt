@@ -1,0 +1,10 @@
+browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa with form data
+note over browser:
+new_note_spa contains the new note as JSON-data containing
+both the content of the note (content) and the timestamp (date):
+end note:
+server-->browser: HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.js
+server-->browser: main.js
+browser-->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+server-->browser: JSON-string.
